@@ -1,0 +1,66 @@
+setclipboard("https://discord.gg/FCrAqYPX")
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shakar60/scripts/main/aurax%20ui%20library%20source%20code", true))()
+
+
+local Window = Library:CreateWindow("sike.CC | V2 | .gg/FCrAqYPX", Vector2.new(350, 300), Enum.KeyCode.RightShift)
+
+
+local CamlockTab = Window:CreateTab("Camlock")
+local VisualTab = Window:CreateTab("Visual")
+
+
+local CamlockSection = CamlockTab:CreateSector("Camlock", "left")
+local RageSection = VisualTab:CreateSector("Rage", "left")
+
+
+CamlockSection:AddButton("Sike.cc Mobile", function()
+    loadstring(game:HttpGet("https://pastefy.app/2StZvw8L/raw", true))()
+end)
+
+CamlockSection:AddButton("Sike.cc PC", function()
+    loadstring(game:HttpGet("https://pastefy.app/SzWMkgzI/raw",true))()
+end)
+
+--[[
+CamlockSection:AddButton("Q Tool", function()
+    loadstring(game:HttpGet("https://rentry.co/542s8rnc/raw", true))()
+end)
+]] -- leave if not needed
+
+CamlockSection:AddDropdown("Dropdown", {"HumanoidRootPart"}, "HumanoidRootPart", true, function(selectedOption)
+    print("Selected: " .. selectedOption)
+end)
+
+
+RageSection:AddButton("Radar", function()
+    loadstring(game:HttpGet("https://pastefy.app/WtiR7xfD/raw",true))()
+    print("Radar Activated")
+end)
+
+RageSection:AddButton("ESP", function()
+    loadstring(game:HttpGet("https://pastefy.app/bhVuloSi/raw",true))()
+    print("ESP Activated")
+end)
+
+RageSection:AddButton("ESP 2", function()
+    loadstring(game:HttpGet("https://pastefy.app/LRZHbuMY/raw",true))()
+    print("ESP 2 Activated")
+end)
+
+
+RageSection:AddButton("Skeletons", function()
+    loadstring(game:HttpGet("https://pastefy.app/01JqDxIJ/raw",true))()
+    print("Skeletons Activated")
+end)
+
+
+
+local ToggleBind = CamlockSection:AddToggle("Keybind", false, function(state)
+    print("Toggle state: " .. tostring(state))
+end)
+
+ToggleBind:AddKeybind()
+
+
+CamlockTab:CreateConfigSystem("right")
